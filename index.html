@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <title>Luna</title>
+  </head>
+
+  <body>
+    <video autoplay muted loop class="bg-video">
+      <source src="images/background.mp4" type="video/mp4" />
+    </video>
+
+    <div class="app-container">
+      <h1 class="title">Luna</h1>
+      <h3 class="subtitle">Merry Christmas Selina!</h3>
+
+      <div class="app-grid-container">
+        <div id="daily-horoscope-box" class="nes-container is-dark is-rounded">
+          <p class="title">Daily Sign</p>
+          <p id="horoscope-text">Loading horoscope...</p>
+        </div>
+
+        <div id="daily-tarot-box" class="nes-container is-dark is-rounded">
+          <p class="title">Daily Card</p>
+          <img
+            id="daily-tarot-img"
+            src="images/tarot/0.png"
+            alt="tarot"
+            class="tarot"
+          />
+        
+        </div>
+
+        <div id="moon-phase-box" class="nes-container is-dark is-rounded">
+          <p class="title">Moon Phase</p>
+          <p id="moon-status">Waxing Gibbous</p>
+        </div>
+
+    
+
+        <div id="tarot-reading-box" class="nes-container is-dark is-rounded">
+          <p class="title">Initiate Reading</p>
+
+          <div class="tarot-reading-content">
+            <div class="tarot-card">
+              <img
+                id="tarot-reading-img-1"
+                src="images/tarot/cardBack.png"
+                alt="tarot past"
+                class="tarot"
+              />
+              <h4 id="tarot-reading-caption-1" class="tarot-caption">Past</h4>
+            </div>
+
+            <div class="tarot-card">
+              <img
+                id="tarot-reading-img-2"
+                src="images/tarot/cardBack.png"
+                alt="tarot present"
+                class="tarot"
+              />
+              <h4 id="tarot-reading-caption-2" class="tarot-caption">
+                Present
+              </h4>
+            </div>
+
+            <div class="tarot-card">
+              <img
+                id="tarot-reading-img-3"
+                src="images/tarot/cardBack.png"
+                alt="tarot future"
+                class="tarot"
+              />
+              <h4 id="tarot-reading-caption-3" class="tarot-caption">Future</h4>
+            </div>
+          </div>
+
+          <div style="margin-top: 12px">
+            <button id="start-reading-btn" class="nes-btn is-success">
+              Start Reading
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // window.GEMINI_API_KEY = "your_key_here"; // optional local test key
+    </script>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

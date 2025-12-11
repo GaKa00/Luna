@@ -1,0 +1,46 @@
+# Node/npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / output
+dist/
+build/
+out/
+.vite/
+.cache/
+parcel-cache/
+.esbuild/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+credentials.json
+*.key
+*.pem
+GEMINI_API_KEY
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.iml
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Misc
+*.tmp
+*.bak
