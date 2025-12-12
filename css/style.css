@@ -176,10 +176,10 @@ button.nes-btn {
   align-items: start;
 }
 
-/* reduce large empty space in each box */
+
 .nes-container {
   padding: 12px;
-  min-height: auto; /* don't force big heights */
+  min-height: auto; 
   box-sizing: border-box;
 }
 
@@ -194,7 +194,7 @@ button.nes-btn {
   border-radius: 6px;
 }
 
-/* reading area layout */
+
 .tarot-reading-content {
   display: flex;
   justify-content: space-around;
@@ -207,7 +207,6 @@ button.nes-btn {
   margin-right: 30px; 
 }
 
-/* caption styling */
 .tarot-caption {
   text-align: center;
   margin-top: 6px;
@@ -215,13 +214,12 @@ button.nes-btn {
   line-height: 1.2;
 }
 
-/* make buttons smaller on mobile */
+
 .nes-btn {
   padding: 6px 10px;
   font-size: 0.85rem;
 }
 
-/* Mobile adjustments */
 @media (max-width: 800px) {
   .app-grid-container {
     grid-template-columns: 1fr;
@@ -244,7 +242,7 @@ button.nes-btn {
   }
 }
 
-/* small screens */
+
 @media (max-width: 420px) {
   .tarot {
     max-width: 140px;
@@ -260,7 +258,7 @@ button.nes-btn {
   }
 }
 
-/* responsive adjustments for mobile */
+
 @media (max-width: 900px) {
   :root {
     --card-width: 100px;
@@ -307,7 +305,7 @@ button.nes-btn {
     word-wrap: break-word;
     hyphens: auto;
     min-height: 150px;
-    grid-column: 1 / -1; /* span full width */
+    grid-column: 1 / -1; 
   }
   #moon-phase-box,
   #daily-tarot-box,
@@ -331,7 +329,7 @@ button.nes-btn {
   }
 }
 
-/* optional small visual tweak to reduce empty vertical space */
+
 .nes-container p {
   margin: 6px 4px;
 }
