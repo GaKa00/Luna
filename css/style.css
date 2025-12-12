@@ -24,15 +24,13 @@ body {
 .title {
   text-align: center;
   color: white;
-  margin-top: 20px;
-  font-size: 36px;
+
 }
 
 .subtitle {
   text-align: center;
   color: white;
-  margin-top: 20px;
-  font-size: 24px;
+ 
 }
 
 .tarot-reading-content {
@@ -57,7 +55,7 @@ body {
 
 /* ROW 1 */
 #daily-horoscope-box {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   grid-row: 1;
 }
 
@@ -72,9 +70,10 @@ body {
   grid-row: 1;
 }
 
-.tarot {
-  width: 200px;
-  height: 250px;
+#start-reading-btn {
+  display: block;
+  margin: 12px auto 0;
+  text-align: center;
 }
 
 /* ROW 3 */
@@ -129,11 +128,11 @@ body {
   padding: var(--small-padding);
 }
 .title {
-  font-size: 0.95rem;
+  font-size: 2rem;
   margin: 6px 0;
 }
 .subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 6px 0 12px;
 }
 
@@ -199,9 +198,13 @@ button.nes-btn {
 .tarot-reading-content {
   display: flex;
   justify-content: space-around;
-  gap: 12px;
+  gap: 16px;
   align-items: flex-start;
   flex-wrap: nowrap;
+}
+
+#tarot-reading-img-2{
+  margin-right: 30px; 
 }
 
 /* caption styling */
@@ -234,10 +237,10 @@ button.nes-btn {
     padding: 10px;
   }
   .title {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .subtitle {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -267,7 +270,27 @@ button.nes-btn {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+  #daily-horoscope-box {
+    grid-column: 1 / span 2;
+  }
+  #moon-phase-box {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  #daily-tarot-box {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  #tarot-reading-box {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  #detailed-horoscope-box {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
 }
+
 @media (max-width: 520px) {
   :root {
     --card-width: 86px;
@@ -279,9 +302,26 @@ button.nes-btn {
     gap: 8px;
     padding: 6px;
   }
-  .title,
+  #daily-horoscope-box {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    min-height: 150px;
+    grid-column: 1 / -1; /* span full width */
+  }
+  #moon-phase-box,
+  #daily-tarot-box,
+  #tarot-reading-box,
+  #detailed-horoscope-box {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .title
+   {
+    font-size: 1.5rem;
+  }
   .subtitle {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   .tarot {
     width: var(--card-width);
