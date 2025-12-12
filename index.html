@@ -15,9 +15,13 @@
   </head>
 
   <body>
+    <audio id="bg-audio" loop>
+      <source src="Background.mp3" type="audio/mpeg" />
+    </audio>
     <video autoplay muted loop class="bg-video">
       <source src="images/background.mp4" type="video/mp4" />
     </video>
+
 
     <div class="app-container">
       <h1 class="title">Luna</h1>
@@ -29,14 +33,18 @@
           <p id="horoscope-text">Loading horoscope...</p>
         </div>
 
-
-
         <div id="moon-phase-box" class="nes-container is-dark is-rounded">
           <p class="title">Moon Phase</p>
           <p id="moon-status">Waxing Gibbous</p>
         </div>
 
-    
+        
+    <button
+      id="play-audio-btn"
+      style="position: fixed; top: 10px; right: 10px; z-index: 1000"
+    >
+      Play Music
+    </button>
 
         <div id="tarot-reading-box" class="nes-container is-dark is-rounded">
           <p class="title">Initiate Reading</p>
@@ -85,5 +93,18 @@
     </div>
 
     <script src="js/script.js" defer></script>
+    <script>
+      // Try autoplay, fallback to button
+      const audio = document.getElementById("bg-audio");
+      const playBtn = document.getElementById("play-audio-btn");
+
+      audio.play().catch(() => {
+        playBtn.style.display = "block";
+        playBtn.addEventListener("click", () => {
+          audio.play();
+          playBtn.style.display = "none";
+        });
+      });
+    </script>
   </body>
 </html>
